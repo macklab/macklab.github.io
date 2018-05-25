@@ -1,11 +1,16 @@
 
 paper.view.viewSize.width = 400;
 paper.view.viewSize.height = 400;
-paper.view.autoUpdate = false;
+paper.view.autoUpdate = true;
 
 //context = canvas.getContext('2d');
+window.globals = {};
+var scope = this;
 
 function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
+
+    scope.activate();
+    project.activeLayer.removeChildren();
 
     // green leaves
     nleaves = 50;
@@ -161,4 +166,5 @@ view.update();
 download_img(5,9,9,9,1);
 */
 
-drawFlower1(1,1,1,1);
+//drawFlower1(1,1,1,1);
+globals.drawFlower1 = drawFlower1;
