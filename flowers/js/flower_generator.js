@@ -12,12 +12,15 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     scope.activate();
     project.activeLayer.removeChildren();
 
+    var xoff = 200;
+    var yoff = 200;
+
     // green leaves
     nleaves = 50;
     for (var x=0;x<nleaves;x++){
         var ang = x*(360/nleaves)+(6*Math.random()-3);
-        var cx = 200+50*Math.cos(ang*Math.PI/180);
-        var cy = 200+50*Math.sin(ang*Math.PI/180);
+        var cx = xoff+50*Math.cos(ang*Math.PI/180);
+        var cy = yoff+50*Math.sin(ang*Math.PI/180);
         var leaf = new Path.Ellipse({
             center: [cx,cy],
             size: [90,8],
@@ -36,8 +39,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     // larger petals
     for (var x=0;x<npetals;x++){
         var ang = x*(360/npetals)+(6*Math.random()-3);
-        var cx = 200+50*Math.cos(ang*Math.PI/180);
-        var cy = 200+50*Math.sin(ang*Math.PI/180);
+        var cx = xoff+50*Math.cos(ang*Math.PI/180);
+        var cy = yoff+50*Math.sin(ang*Math.PI/180);
         var petal = new Path.Ellipse({
             center: [cx,cy],
             size: petalSize1,
@@ -60,8 +63,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     // smaller petals
     for (var x=0;x<npetals;x++){
         var ang = x*(360/npetals)+360/(npetals*2)+(6*Math.random()-3);
-        var cx = 200+25*Math.cos(ang*Math.PI/180);
-        var cy = 200+25*Math.sin(ang*Math.PI/180);
+        var cx = xoff+25*Math.cos(ang*Math.PI/180);
+        var cy = yoff+25*Math.sin(ang*Math.PI/180);
         var petal = new Path.Ellipse({
             center: [cx,cy],
             size: petalSize2,
@@ -88,8 +91,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     var rcolor = new Color(225/255,229/255,20/255,0.95);
     for (var x=0;x<nring;x++){
         var ang = x*(360/nring);
-        var cx = 200+20*Math.cos(ang*Math.PI/180)+(1*Math.random()-0.5);
-        var cy = 200+20*Math.sin(ang*Math.PI/180)+(1*Math.random()-0.5);
+        var cx = xoff+20*Math.cos(ang*Math.PI/180)+(1*Math.random()-0.5);
+        var cy = yoff+20*Math.sin(ang*Math.PI/180)+(1*Math.random()-0.5);
         var ring = new Path.Ellipse({
             center: [cx,cy],
             size: ringSize,
@@ -105,8 +108,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     icircle.fillColor.hue += circleRatio*35;
     for (var x=0;x<100;x++){
         var ang = x*(360/60);
-        var cx = 200+18*Math.cos(ang*Math.PI/180)+(1*Math.random()-0.5);
-        var cy = 200+18*Math.sin(ang*Math.PI/180)+(1*Math.random()-0.5);
+        var cx = xoff+18*Math.cos(ang*Math.PI/180)+(1*Math.random()-0.5);
+        var cy = yoff+18*Math.sin(ang*Math.PI/180)+(1*Math.random()-0.5);
         icircle.add(new Point(cx,cy));
     }
     icircle.closePath();
@@ -119,8 +122,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
         for (var x=1;x<ndots+1;x++){
             rang = rangbeg+x*2*Math.PI/ndots+0.1*Math.random();
             rrad = xr+0.1*Math.random();
-            var cx = 200+rrad*Math.cos(rang);
-            var cy = 200+rrad*Math.sin(rang);
+            var cx = xoff+rrad*Math.cos(rang);
+            var cy = yoff+rrad*Math.sin(rang);
             var spot = new Path.Ellipse({
                 center: [cx,cy],
                 size: [3,3],
@@ -134,8 +137,8 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     /*for (var x=0;x<200;x++){
         rang = 2*Math.random()*Math.PI;
         rrad = 15*Math.random();
-        var cx = 200+rrad*Math.cos(rang);
-        var cy = 200+rrad*Math.sin(rang);
+        var cx = xoff+rrad*Math.cos(rang);
+        var cy = yoff+rrad*Math.sin(rang);
         var spot = new Path.Ellipse({
             center: [cx,cy],
             size: [3,3],

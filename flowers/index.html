@@ -15,18 +15,22 @@
             globals.drawFlower1(x1,x2,x3,x4);
         }
     </script>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="9" value="5" class="slider" id="x1" onchange="javascript:update_flower()">
+    <div style="float:left;width:20%">
+        <div class="slidecontainer">
+            <input type="range" min="1" max="9" value="5" class="slider" id="x1" onchange="javascript:update_flower()">
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="9" value="5" class="slider" id="x2" onchange="javascript:update_flower()">
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="9" value="5" class="slider" id="x3" onchange="javascript:update_flower()">
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="9" value="5" class="slider" id="x4" onchange="javascript:update_flower()">
+        </div>
     </div>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="9" value="5" class="slider" id="x2" onchange="javascript:update_flower()">
+    <div style="float:right;width:80%">
+        <canvas id="myCanvas" style="border:1px solid #ccc"></canvas>
     </div>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="9" value="5" class="slider" id="x3" onchange="javascript:update_flower()">
-    </div>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="9" value="5" class="slider" id="x4" onchange="javascript:update_flower()">
-    </div>
-	<canvas id="myCanvas" resize></canvas>
 </body>
 </html>
