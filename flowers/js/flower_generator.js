@@ -150,10 +150,10 @@ function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
     }*/
 }
 
-function download_img(petalColor,petalShape,ringShape,circleColor,x){
+function download_img(petalColor,petalShape,ringShape,circleColor){
     var link = document.createElement('a');
     link.href = canvas.toDataURL();
-    link.download = 'flower1_'+petalColor+petalShape+ringShape+circleColor+'_'+x+'.png';
+    link.download = 'flower1_'+petalColor+petalShape+ringShape+circleColor+'.png';
     link.click();
 }
 
