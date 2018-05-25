@@ -161,4 +161,4 @@ view.update();
 download_img(5,9,9,9,1);
 */
 
-drawFlower1(c,x,y,z);
+drawFlower1(1,1,1,1);
