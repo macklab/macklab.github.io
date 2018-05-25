@@ -3,7 +3,7 @@ paper.view.viewSize.width = 400;
 paper.view.viewSize.height = 400;
 paper.view.autoUpdate = false;
 
-context = canvas.getContext('2d');
+//context = canvas.getContext('2d');
 
 function drawFlower1(petalColor,petalShape,ringShape,circleColor) {
 
